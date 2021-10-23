@@ -1,0 +1,29 @@
+{
+  "name": "upwork-notify-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodirshox/upwork-notify-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nodirshox/upwork-notify-bot/issues"
+  },
+  "homepage": "https://github.com/nodirshox/upwork-notify-bot#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "rss-parser": "^3.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
