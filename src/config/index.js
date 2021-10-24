@@ -1,4 +1,5 @@
 const config = {
+	mongoURL: getConf("MONGO_URL", "mongodb://localhost:27017/bot"),
 	botToken: getConf("BOT_TOKEN", "default"),
 	bestMatchesToken: getConf("BEST_MATCHES_TOKEN", "default"),
 	latestMatchesToken: getConf("LATEST_MATCHES_TOKEN", "default"),
