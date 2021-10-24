@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/nodirshox/upwork-notify-bot#readme",
   "dependencies": {
+    "dateformat": "^4.5.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mongoose": "^6.0.12",
     "node-fetch": "^2.6.1",
     "rss-parser": "^3.12.0"
   },
