@@ -66,17 +66,27 @@ exports.changeStatus = async (jobs) => {
     });
 }
 
-exports.sendMessage = async (message) => {
+exports.sendMessage = async (message, link) => {
     const URL = 'https://api.telegram.org/bot' + config.botToken + '/sendMessage';
-    const BODY = {
+    let body = {
         chat_id: config.channelID,
         text: message,
         parse_mode: "HTML",
         disable_web_page_preview: 1
     }
+    if (link) {
+        body.reply_markup = {
+            inline_keyboard: [
+                [{
+                    text: "Apply",
+                    url: link
+                }]
+            ]
+        }
+    }
     await fetch(URL, {
         method: "POST",
-        body: JSON.stringify(BODY),
+        body: JSON.stringify(body),
         headers: { 'Content-Type': 'application/json' }
     });
 }
