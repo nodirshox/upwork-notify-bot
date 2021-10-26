@@ -56,10 +56,10 @@ router.post('/custom-matches', async (req, res) => {
 
 router.get('/publish-saved-jobs', async (req, res) => {
     let jobs = await findUnpublishedJob();
-    if (jobs.length > 0) {
+    if (jobs.length === 1) {
         let message = await createMessage('💾 SAVED JOBS', jobs);
 
-        await sendMessage(message);
+        await sendMessage(message, jobs[0].link);
         await changeStatus(jobs);
     }
     res.json(responseMessage);
